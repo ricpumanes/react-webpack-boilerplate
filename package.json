@@ -4,9 +4,10 @@
   "description": "",
   "main": "./src/index.js",
   "scripts": {
-    "build": "webpack --config ./config/webpack.config-prod.js --mode production",
+    "build": "webpack --env.NODE_ENV=prod --config ./config/webpack.config-prod.js --mode production",
+    "clean": "rm -rf ./build",
     "dev": "npm run clean; webpack-dev-server --env.NODE_ENV=local --mode development --config ./config/webpack.config.js",
-    "clean": "rm -rf ./build"
+    "prod": "npm run clean; npm run build"
   },
   "keywords": [
     "react",
@@ -24,10 +25,12 @@
     "babel-loader": "^8.0.0",
     "css-loader": "^1.0.0",
     "html-webpack-plugin": "^4.0.0-alpha",
+    "mini-css-extract-plugin": "^0.4.2",
     "node-sass": "^4.9.3",
     "react-hot-loader": "^4.3.5",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.0",
+    "uglifyjs-webpack-plugin": "^1.3.0",
     "webpack": "^4.17.1",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.6"

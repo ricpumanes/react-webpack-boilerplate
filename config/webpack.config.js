@@ -16,7 +16,7 @@ const webpackConfig = env => {
     },
     output: {
       path: path.resolve(__dirname, '../build'),
-      filename: '[name].[hash].bundle.js',
+      filename: '[name].[hash].js',
       publicPath: '/',
     },
     module: {
@@ -29,11 +29,18 @@ const webpackConfig = env => {
           },
         },
         {
+          test: /\.css$/,
+          use: [
+            'style-loader',
+            'css-loader',
+          ],
+        },
+        {
           test: /\.(scss|sass)$/,
           use: [
-            "style-loader", // creates style nodes from JS strings
-            "css-loader", // translates CSS into CommonJS
-            "sass-loader" // compiles Sass to CSS, using Node Sass by default
+            "style-loader",
+            "css-loader",
+            "sass-loader",
           ],
         },
       ],
