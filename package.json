@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --env.NODE_ENV=prod --config ./config/webpack.config-prod.js --mode production",
     "clean": "rm -rf ./build",
-    "dev": "npm run clean; webpack-dev-server --env.NODE_ENV=local --mode development --config ./config/webpack.config.js",
+    "dev": "webpack-dev-server --env.NODE_ENV=local --mode development --config ./config/webpack.config.js",
     "prod": "npm run clean; npm run build"
   },
   "keywords": [
@@ -29,6 +29,7 @@
     "mini-css-extract-plugin": "0.4.2",
     "node-sass": "4.9.3",
     "react-hot-loader": "4.3.5",
+    "redux-logger": "3.0.6",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.0",
     "uglifyjs-webpack-plugin": "1.3.0",
@@ -40,6 +41,9 @@
     "@babel/polyfill": "7.0.0",
     "prop-types": "15.6.2",
     "react": "16.4.2",
-    "react-dom": "16.4.2"
+    "react-dom": "16.4.2",
+    "react-router-dom": "4.3.1",
+    "redux": "4.0.0",
+    "redux-thunk": "2.3.0"
   }
 }
