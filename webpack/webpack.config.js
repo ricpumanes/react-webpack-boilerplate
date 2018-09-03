@@ -10,7 +10,6 @@ const webpackConfig = env => {
     entry: {
       bundle: [
         '@babel/polyfill',
-        'react-hot-loader/patch',
         path.join(srcPath, './index.js'),
       ],
     },
@@ -66,11 +65,30 @@ const webpackConfig = env => {
               },
             }
           ]
-        },  
+        },
+        {
+          test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+          use: 'file-loader'
+        },
+        {
+          test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+          use: 'url-loader?prefix=font/&limit=5000'
+        },
+        {
+          test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+          use: 'url-loader?limit=10000&mimetype=application/octet-stream'
+        },
       ],
     },
     resolve: {
       extensions: ['*', '.js', '.jsx'],
+      alias: {
+        Assets: path.resolve(__dirname, '../public/assets/'),
+        Module: path.resolve(__dirname, '../src/modules/'),
+        // Config: path.resolve(__dirname, 'config/'),
+        // Media: path.resolve(__dirname, 'config/media.js'),
+        // Logger: path.resolve(__dirname, 'config/logger.js'),
+      },
     },
     plugins: [
       new HtmlWebpackPlugin({
