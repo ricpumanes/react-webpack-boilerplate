@@ -84,10 +84,8 @@ const webpackConfig = env => {
       extensions: ['*', '.js', '.jsx'],
       alias: {
         Assets: path.resolve(__dirname, '../public/assets/'),
-        Module: path.resolve(__dirname, '../src/modules/'),
-        // Config: path.resolve(__dirname, 'config/'),
-        // Media: path.resolve(__dirname, 'config/media.js'),
-        // Logger: path.resolve(__dirname, 'config/logger.js'),
+        RootDir: path.resolve(__dirname, '../src/'),
+        LoginDir: path.resolve(__dirname, '../src/login/'),
       },
     },
     plugins: [

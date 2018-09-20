@@ -7,7 +7,8 @@
     "build": "webpack --env.NODE_ENV=prod --config ./webpack/webpack.config-prod.js --mode production",
     "clean": "rm -rf ./build",
     "dev": "webpack-dev-server --env.NODE_ENV=local --mode development --config ./webpack/webpack.config.js",
-    "prod": "npm run clean; npm run build"
+    "prod": "npm run clean; npm run build",
+    "test": "jest --watchAll"
   },
   "keywords": [
     "react",
@@ -22,11 +23,14 @@
     "@babel/plugin-proposal-class-properties": "7.0.0",
     "@babel/preset-env": "7.0.0",
     "@babel/preset-react": "7.0.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "23.6.0",
     "babel-loader": "8.0.0",
     "css-loader": "1.0.0",
     "file-loader": "2.0.0",
     "html-webpack-plugin": "4.0.0-alpha",
     "image-webpack-loader": "4.3.1",
+    "jest": "23.6.0",
     "mini-css-extract-plugin": "0.4.2",
     "node-sass": "4.9.3",
     "react-hot-loader": "4.3.5",

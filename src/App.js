@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 const env = process.env.NODE_ENV;
 
 const Home = () => <h1>Home</h1>;
-const About = () => <h1>About</h1>;
+const Login = () => <h1>Login</h1>;
 const NotFound = () => <h1>Not Found</h1>;
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
       <div>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
+          <Route path="/login" component={Login} />
           <Route path="/*" component={NotFound} />
         </Switch>
       </div>
