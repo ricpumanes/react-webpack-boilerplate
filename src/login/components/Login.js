@@ -13,7 +13,6 @@ class Login extends Component {
   
   onSubmit = (event) => {
     event.preventDefault();
-    console.log('submit');
   }
   
   render() {

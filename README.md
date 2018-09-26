@@ -76,5 +76,4 @@ describe("Login Async Action", () => {
 ```
 
 **TODO:**
-- linting
 - simulate prod
