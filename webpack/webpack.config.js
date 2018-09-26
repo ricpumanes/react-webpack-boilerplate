@@ -85,7 +85,6 @@ const webpackConfig = env => {
       alias: {
         Assets: path.resolve(__dirname, '../public/assets/'),
         RootDir: path.resolve(__dirname, '../src/'),
-        LoginDir: path.resolve(__dirname, '../src/login/'),
       },
     },
     plugins: [

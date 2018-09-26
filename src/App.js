@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
+import Login from 'RootDir/login/components/Login';
+
 const env = process.env.NODE_ENV;
 
 const Home = () => <h1>Home</h1>;
-const Login = () => <h1>Login</h1>;
 const NotFound = () => <h1>Not Found</h1>;
 
 const App = () => {

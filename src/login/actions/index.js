@@ -1,15 +1,16 @@
 import * as types from './types';
 
-export const foo = () => (dispatch) => {
-  return {
-    type: types.FOO,
-    payload: 'test',
-  };
-}
+export const login = formData => ({
+  type: types.AUTH_LOGIN,
+  payload: formData,
+});
 
-export const bar = () => (dispatch) => {
-  return {
-    type: types.BAR,
-    payload: 'test',
-  };
-}
+export const loginSuccess = userInfo => ({
+  type: types.AUTH_LOGIN_SUCCESS,
+  payload: userInfo,
+});
+
+export const loginFailed = error => ({
+  type: types.AUTH_LOGIN_FAILED,
+  payload: error,
+});

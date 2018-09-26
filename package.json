@@ -62,6 +62,9 @@
     "setupTestFrameworkScriptFile": "<rootDir>__tests__/setup/setupEnzyme.js",
     "testPathIgnorePatterns": [
       "<rootDir>/__tests__/setup/"
-    ]
+    ],
+    "moduleNameMapper": {
+      "^RootDir(.*)$": "<rootDir>/src$1"
+    }
   }
 }
