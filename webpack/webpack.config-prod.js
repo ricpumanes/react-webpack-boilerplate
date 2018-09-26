@@ -33,6 +33,7 @@ const config = env => {
     use: [
       { loader: MiniCssExtractPlugin.loader },
       "css-loader",
+      "postcss-loader", // add vendor prefixes to your css
       "sass-loader",
     ],
   };
