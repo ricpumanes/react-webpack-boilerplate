@@ -10,7 +10,8 @@
     "prod": "npm run clean; npm run build",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "simulate": "node ./servers/dev.js"
   },
   "keywords": [
     "react",
@@ -58,6 +59,8 @@
   },
   "dependencies": {
     "@babel/polyfill": "7.0.0",
+    "@feathersjs/express": "^1.2.7",
+    "@feathersjs/feathers": "^3.2.3",
     "prop-types": "15.6.2",
     "react": "16.4.2",
     "react-dom": "16.4.2",

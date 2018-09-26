@@ -75,5 +75,24 @@ describe("Login Async Action", () => {
 
 ```
 
+**Simulate Production Build**
+
+***1. build project first***
+```javascript
+npm run prod
+```
+
+***2. generate self-signed certificates (key and cert)***
+```javascript
+openssl req -nodes -new -x509 -keyout server.key -out server.cert
+```
+
+***3. simulate***
+```javascript
+npm run simulate
+```
+
+Finally, open on app on https://localhost:5000 or on the PORT you set
+
 **TODO:**
 - simulate prod
