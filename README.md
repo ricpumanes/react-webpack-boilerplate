@@ -8,9 +8,15 @@ A Boilerplate for ReactJS + Webpack 4 + React Router 4 and Redux
 git clone git@github.com:ricpumanes/react-webpack-boilerplate.git
 ```
 or
+
 **clone the repo using HTTPS:**
 ```javascript
 git clone https://github.com/ricpumanes/react-webpack-boilerplate.git
+```
+
+**install dependencies**
+```javascript
+npm install
 ```
 
 **start the app locally (development mode):**
