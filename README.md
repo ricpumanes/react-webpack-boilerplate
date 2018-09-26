@@ -3,37 +3,37 @@ A Boilerplate for ReactJS + Webpack 4 + React Router 4 and Redux
 
 ## Usage
 
-clone the repo using SSH:
+**clone the repo using SSH:**
 ```javascript
 git clone git@github.com:ricpumanes/react-webpack-boilerplate.git
 ```
 or
-clone the repo using HTTPS:
+**clone the repo using HTTPS:**
 ```javascript
 git clone https://github.com/ricpumanes/react-webpack-boilerplate.git
 ```
 
-start the app locally (development mode):
+**start the app locally (development mode):**
 ```javascript
 npm run dev
 ```
 
-build (production mode):
+**build (production mode):**
 ```javascript
 npm run prod
 ```
 
-test:
+**test:**
 ```javascript
 npm test
 ```
 
-watch test:
+**watch test:**
 ```javascript
 npm run test:watch
 ```
 
-Testing Async (with Feathers JS):
+**Testing Async (with Feathers JS):**
 
 ```javascript
 import configureStore from 'redux-mock-store';
@@ -69,6 +69,6 @@ describe("Login Async Action", () => {
 
 ```
 
-TODO:
+**TODO:**
 - linting
 - simulate prod
