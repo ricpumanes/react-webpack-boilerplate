@@ -95,4 +95,3 @@ npm run simulate
 Finally, open on app on https://localhost:5000 or on the PORT you set
 
 **TODO:**
-- simulate prod
