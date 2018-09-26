@@ -1,6 +1,13 @@
 # react-webpack-boilerplate
 A Boilerplate for ReactJS + Webpack 4 + React Router 4 and Redux
 
+Tech used:
+- [Babel 7](https://babeljs.io/docs/en/index.html)
+- [React 16](https://reactjs.org/)
+- [Redux 4](https://redux.js.org/)
+- [React Router Dom (React Router 4)](https://reacttraining.com/react-router/web/guides/philosophy)
+- [Webpack 4](https://webpack.js.org/concepts/)
+
 ## Usage
 
 **clone the repo using SSH:**
