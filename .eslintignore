@@ -1,3 +1,7 @@
 build/
 __tests__/
 webpack/
+node_modules/
+coverage/
+config/
+public/
