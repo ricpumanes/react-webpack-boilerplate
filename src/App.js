@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Login from 'RootDir/login/components/Login';
+import Login from 'RootDir/login/containers/Login';
 
 const env = process.env.NODE_ENV;
 

@@ -1,6 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Login extends Component {
+  static propTypes = {
+    actions: PropTypes.object,
+  }
 
   state = {
     email: '',
@@ -13,6 +17,7 @@ class Login extends Component {
   
   onSubmit = (event) => {
     event.preventDefault();
+    this.props.actions.login(this.state);
   }
   
   render() {
