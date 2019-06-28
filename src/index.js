@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import '../public/assets/styles/sass/index.scss';
 
 import App from './App';
-import store from './store';
+import store from './logic/store';
 
 render(
   <Provider store={store}>

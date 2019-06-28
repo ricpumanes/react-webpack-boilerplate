@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Login from 'RootDir/login/containers/Login';
+import Login from './modules/login/components/Login';
 
 const Home = () => <h1>Home</h1>;
 const NotFound = () => <h1>Not Found</h1>;
