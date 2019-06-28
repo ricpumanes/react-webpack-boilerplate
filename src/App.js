@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Login from 'RootDir/login/containers/Login';
 
-const env = process.env.NODE_ENV;
-
 const Home = () => <h1>Home</h1>;
 const NotFound = () => <h1>Not Found</h1>;
 
@@ -22,10 +20,4 @@ const App = () => {
   );
 }
 
-let parent = App;
-
-if (env !== 'prod'){
-    parent = require('react-hot-loader').hot(module)(App);
-}
-
-export default parent;
+export default App;

@@ -111,13 +111,11 @@ const webpackConfig = env => {
         template: path.resolve(__dirname, '../public/index.html'),
         showErrors: true,
       }),
-      new webpack.HotModuleReplacementPlugin(),
       new webpack.EnvironmentPlugin({
         NODE_ENV: env.NODE_ENV,
       }),
     ],
     devServer: {
-      hot: true,
       https: true,
       disableHostCheck: true,
       historyApiFallback: true,
