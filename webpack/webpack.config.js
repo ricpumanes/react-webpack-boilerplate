@@ -102,12 +102,21 @@ const webpackConfig = env => {
       alias: {
         Assets: path.resolve(__dirname, '../public/assets/'),
         RootDir: path.resolve(__dirname, '../src/'),
+        ClientDir: path.resolve(__dirname, '../src/client/'),
+        AdminDir: path.resolve(__dirname, '../src/admin/'),
+        LogicDir: path.resolve(__dirname, '../src/logic/'),
       },
     },
     plugins: [
       new HtmlWebpackPlugin({
         title: 'React & Webpack Boilerplate',
         filename: 'index.html',
+        template: path.resolve(__dirname, '../public/index.html'),
+        showErrors: true,
+      }),
+      new HtmlWebpackPlugin({
+        title: 'Testing lang',
+        filename: 'testing.html',
         template: path.resolve(__dirname, '../public/index.html'),
         showErrors: true,
       }),
