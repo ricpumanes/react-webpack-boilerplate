@@ -1,7 +1,7 @@
 import React from 'react';
 import useLogin from '../../../logic/hooks/useLogin';
 
-function Login () {
+function LoginForm () {
   const { email, password, errors, loginError, isLoggingIn, onChangeEmail, onChangePassword, onValidate, onLogin } = useLogin();
   return (
     <div>
@@ -34,4 +34,4 @@ function Login () {
   );
 }
 
-export default Login;
+export default LoginForm;

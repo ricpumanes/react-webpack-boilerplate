@@ -1,21 +1,22 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Login from './modules/login/components/Login';
+import MainLayout from './layouts/Main';
+import Login from './pages/Login';
+import Home from './pages/Home';
 
-const Home = () => <h1>Home</h1>;
 const NotFound = () => <h1>Not Found</h1>;
 
 const App = () => {
   return (
     <Router>
-      <div>
+      <MainLayout>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/login" component={Login} />
           <Route path="/*" component={NotFound} />
         </Switch>
-      </div>
+      </MainLayout>
     </Router>
   );
 }
