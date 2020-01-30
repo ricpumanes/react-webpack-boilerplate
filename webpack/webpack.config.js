@@ -50,7 +50,7 @@ const webpackConfig = env => {
                 sourceMap: true // enable sourcemapping in dev only for debugging
               }
             },
-            'postcss-loader', // add a vendor prefixes to your sass
+            "postcss-loader", // add a vendor prefixes to your sass
             {
               loader: "sass-loader",
               options: {
@@ -76,7 +76,7 @@ const webpackConfig = env => {
                   optimizationLevel: 7,
                 },
                 pngquant: {
-                  quality: '65-90',
+                  quality: [0.65, 0.90],
                   speed: 4,
                 },
               },
@@ -101,12 +101,14 @@ const webpackConfig = env => {
       extensions: ['*', '.js', '.jsx'],
       alias: {
         Assets: path.resolve(__dirname, '../public/assets/'),
+        ModulesDir: path.resolve(__dirname, '../src/modules/'),
+        LogicDir: path.resolve(__dirname, '../src/logic/'),
         RootDir: path.resolve(__dirname, '../src/'),
       },
     },
     plugins: [
       new HtmlWebpackPlugin({
-        title: 'React & Webpack Boilerplate',
+        title: 'React Boilerplate',
         filename: 'index.html',
         template: path.resolve(__dirname, '../public/index.html'),
         showErrors: true,
@@ -116,9 +118,11 @@ const webpackConfig = env => {
       }),
     ],
     devServer: {
-      https: true,
+      https: false,
       disableHostCheck: true,
-      historyApiFallback: true,
+      historyApiFallback: {
+				disableDotRule: true,
+			},
       host: '0.0.0.0',
       port: 3000,
     },

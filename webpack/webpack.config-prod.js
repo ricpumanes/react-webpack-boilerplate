@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const devConfig = require('./webpack.config');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 const VENDOR_LIBS = [
   'react',
@@ -33,7 +33,7 @@ const config = env => {
     use: [
       { loader: MiniCssExtractPlugin.loader },
       "css-loader",
-      "postcss-loader", // add vendor prefixes to your css
+      "postcss-loader",
       "sass-loader",
     ],
   };
@@ -46,11 +46,8 @@ const config = env => {
     }),
   );
   prodConfig.optimization = {
-    minimizer: [
-      new UglifyJsPlugin({
-        parallel: 10,
-      }),
-    ],
+    minimize: true,
+    minimizer: [new TerserPlugin()],
     splitChunks: {
       chunks: 'all',
       cacheGroups: {
