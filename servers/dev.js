@@ -4,7 +4,7 @@ const fs = require('fs');
 const https  = require('https');
 
 const app = express();
-const PORT = 5000.
+const PORT = 5000;
 
 const publicPath = path.resolve(__dirname, "../build");
 
