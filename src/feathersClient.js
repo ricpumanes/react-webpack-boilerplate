@@ -3,7 +3,7 @@ const socketio = require("@feathersjs/socketio-client");
 const io = require("socket.io-client");
 const auth = require("@feathersjs/authentication-client");
 
-const host = "https://local-company.appshouse.com";
+const host = "<host>";
 
 let client = feathers();
 
