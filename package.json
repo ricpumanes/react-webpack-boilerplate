@@ -84,6 +84,9 @@
       "<rootDir>/__tests__/setupTests.js",
       "<rootDir>/__tests__/utils/"
     ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/__tests__/setupTests.js"
+    ],
     "moduleNameMapper": {
       "^RootDir(.*)$": "<rootDir>/src$1"
     }
