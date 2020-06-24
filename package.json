@@ -8,7 +8,8 @@
     "clean": "rm -rf ./build",
     "dev": "webpack-dev-server --env.NODE_ENV=local --mode development --config ./webpack/webpack.config.js",
     "prod": "npm run clean; npm run build",
-    "test": "jest --coverage",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
     "lint": "eslint src",
     "simulate": "node ./servers/dev.js"
@@ -28,8 +29,13 @@
     "@babel/cli": "^7.10.3",
     "@babel/core": "^7.10.3",
     "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/plugin-transform-runtime": "^7.10.3",
     "@babel/preset-env": "^7.10.3",
     "@babel/preset-react": "^7.10.1",
+    "@sheerun/mutationobserver-shim": "^0.3.3",
+    "@testing-library/jest-dom": "^5.10.1",
+    "@testing-library/react": "^10.4.1",
+    "@testing-library/user-event": "^12.0.7",
     "autoprefixer": "^9.8.3",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
@@ -61,8 +67,10 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.10.1",
+    "@feathersjs/authentication-client": "^4.5.4",
     "@feathersjs/express": "^4.5.4",
     "@feathersjs/feathers": "^4.5.3",
+    "@feathersjs/socketio-client": "^4.5.4",
     "prop-types": "15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -70,11 +78,12 @@
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
     "redux-thunk": "2.3.0",
+    "socket.io-client": "^2.3.0",
     "validate.js": "0.13.1"
   },
   "jest": {
     "testPathIgnorePatterns": [
-      "<rootDir>/__tests__/setup/",
+      "<rootDir>/__tests__/setupTests.js",
       "<rootDir>/__tests__/utils/"
     ],
     "moduleNameMapper": {
