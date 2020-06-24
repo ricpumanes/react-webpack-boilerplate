@@ -1,47 +1,65 @@
 # react-webpack-boilerplate
+
 A Boilerplate for ReactJS + Webpack 4 + React Router 4 and Redux
 
-Tech used:
+#### Tech used:
+
 - [Babel 7](https://babeljs.io/docs/en/index.html)
 - [React 16](https://reactjs.org/)
 - [Redux 4](https://redux.js.org/)
 - [React Router Dom (React Router 4)](https://reacttraining.com/react-router/web/guides/philosophy)
 - [Webpack 4](https://webpack.js.org/concepts/)
+- [Feathers](https://docs.feathersjs.com/)
+- [Tailwind](https://tailwindcss.com/docs)
+- [Styled Components](https://styled-components.com/)
+
+#### Testing
+
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
+- [Jest](https://jestjs.io/docs/en/getting-started)
 
 ## Usage
 
 **clone the repo using SSH:**
+
 ```javascript
 git clone git@github.com:ricpumanes/react-webpack-boilerplate.git
 ```
+
 or
 
 **clone the repo using HTTPS:**
+
 ```javascript
 git clone https://github.com/ricpumanes/react-webpack-boilerplate.git
 ```
 
 **install dependencies**
+
 ```javascript
 npm install
 ```
 
 **start the app locally (development mode):**
+
 ```javascript
 npm run dev
 ```
 
 **build (production mode):**
+
 ```javascript
 npm run prod
 ```
 
 **test:**
+
 ```javascript
 npm test
 ```
 
 **watch test:**
+
 ```javascript
 npm run test:watch
 ```
@@ -49,52 +67,54 @@ npm run test:watch
 **Testing Async (with Feathers JS):**
 
 ```javascript
-import configureStore from 'redux-mock-store';
-import thunk from 'redux-thunk'; // if you are using thunk middleware
-import * as actions from 'path-to-module-actions';
-import app from 'path-to-my-feathers-config';
+import configureStore from "redux-mock-store";
+import thunk from "redux-thunk"; // if you are using thunk middleware
+import * as actions from "path-to-module-actions";
+import app from "path-to-my-feathers-config";
 
 const middlewares = [thunk];
 const mockStore = configureStore(middlewares);
 const store = mockStore();
 
 const userAccount = {
-  email: 'test@testing.com',
-  password: '12345678',
+  email: "test@testing.com",
+  password: "12345678",
 };
 
 describe("Login Async Action", () => {
   it("should return AUTH_LOGIN_SUCCESS if Login was successful", () => {
     const expected = [
-      { type: 'AUTH_LOGIN', payload: userAccount },
-      { type: 'AUTH_LOGIN_SUCCESS', payload: userAccount },
+      { type: "AUTH_LOGIN", payload: userAccount },
+      { type: "AUTH_LOGIN_SUCCESS", payload: userAccount },
     ];
     // stab the service
     app.authenticate = jest.fn(() => {
       return Promise.resolve();
     });
-    
+
     return store.dispatch(actions.login(userAccount)).then(() => {
       expect(store.getActions()).toEqual(expected);
     });
   });
 });
-
 ```
 
 **Simulate Production Build**
 
-***1. build project first***
+**_1. build project first_**
+
 ```javascript
 npm run prod
 ```
 
-***2. generate self-signed certificates (key and cert)***
+**_2. generate self-signed certificates (key and cert)_**
+
 ```javascript
 openssl req -nodes -new -x509 -keyout server.key -out server.cert
 ```
 
-***3. simulate***
+**_3. simulate_**
+
 ```javascript
 npm run simulate
 ```

@@ -5,7 +5,5 @@ dist/
 
 *.log
 
-package-lock.json
-
 *.cert
 *.key
