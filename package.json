@@ -41,6 +41,7 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.1.0",
     "babel-loader": "^8.1.0",
+    "babel-plugin-styled-components": "^1.10.7",
     "css-loader": "^3.6.0",
     "css-mqpacker": "7.0.0",
     "cssnano": "4.1.10",
@@ -80,6 +81,7 @@
     "redux": "^4.0.5",
     "redux-thunk": "2.3.0",
     "socket.io-client": "^2.3.0",
+    "styled-components": "^5.1.1",
     "tailwindcss": "^1.4.6",
     "validate.js": "0.13.1"
   },
