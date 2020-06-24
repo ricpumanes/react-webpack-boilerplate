@@ -121,4 +121,24 @@ npm run simulate
 
 Finally, open on app on https://localhost:5000 or on the PORT you set
 
-**TODO:**
+## Extending TailwindCSS Fonts and Colors:
+
+### FONT FAMILY
+
+```markdown
+1. Download font from google font or wherever
+2. Copy and paste the font folder to `public/assets/fonts`
+3. Open `public/assets/styles/_fonts.scss`
+4. Follow the implementation on adding a new font
+5. Go to `tailwind.config.js` and add a new property on `extend.fontFamily` object (the property is the name of the font)
+6. Rebuild/restart the project `npm start`
+7. Use as "font-<nameOfFontFamily>"
+```
+
+### COLORS
+
+```markdown
+1. Go to `tailwind.config.js` and add a new property on `extend.colors` object
+2. The name of the color should start with `cstm-` (e.g. cstm-blue-1)
+3. Use as "text-cstm-blue-1" or "bg-cstm-blue-1"
+```

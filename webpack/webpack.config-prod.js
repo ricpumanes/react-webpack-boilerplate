@@ -41,8 +41,8 @@ const config = env => {
   // include plugins
   prodConfig.plugins.push(
     new MiniCssExtractPlugin({
-      filename: "[name].css",
-      chunkFilename: "[id].css",
+      filename: "[name].[hash].css",
+      chunkFilename: "[id].[hash].css",
     }),
   );
   prodConfig.optimization = {

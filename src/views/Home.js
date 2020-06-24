@@ -1,17 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 const Home = (props) => {
   return (
     <div>
-      Home
+      <div className="h-screen bg-gray-500">home</div>
     </div>
   );
 };
 
-Home.propTypes = {
-
-};
+Home.propTypes = {};
 
 export default Home;
-

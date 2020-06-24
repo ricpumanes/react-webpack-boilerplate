@@ -1,8 +1,10 @@
 // Config for Post CSS
 module.exports = {
   plugins: [
-    require('autoprefixer'),
-    require('cssnano'),
-    require('css-mqpacker')
-  ]
-}
+    require("postcss-import"),
+    require("tailwindcss"),
+    require("autoprefixer"),
+    require("cssnano"),
+    require("css-mqpacker"),
+  ],
+};
