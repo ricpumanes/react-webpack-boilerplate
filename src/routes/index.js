@@ -1,9 +1,9 @@
-import React from "react";
-import { Switch, Route } from "react-router-dom";
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 
-import Login from "../views/Login";
-import Home from "../views/Home";
-import NotFound from "../views/NotFound";
+import Login from '../views/Login';
+import Home from '../views/Home';
+import NotFound from '../views/NotFound';
 
 const index = () => {
   return (

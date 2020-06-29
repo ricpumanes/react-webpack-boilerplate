@@ -18,10 +18,7 @@ const Home = (props) => {
     <div className="h-screen">
       <div className="bg-gray-500">home</div>
       <h1 data-testid="count-display">{count}</h1>
-      <Button
-        data-testid="button-increment"
-        onClick={() => setCount(count + 1)}
-      >
+      <Button data-testid="button-increment" onClick={() => setCount(count + 1)}>
         Increment
       </Button>
     </div>

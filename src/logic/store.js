@@ -6,7 +6,4 @@ import logger from 'redux-logger';
 import rootReducer from './rootReducer';
 import serviceCaller from './common/serviceCallers';
 
-export default createStore(
-  rootReducer,
-  applyMiddleware(thunk, logger, serviceCaller),
-);
+export default createStore(rootReducer, applyMiddleware(thunk, logger, serviceCaller));

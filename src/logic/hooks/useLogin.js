@@ -2,30 +2,30 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import validate from 'validate.js';
 
-import { usersLogin } from '../actions/';
+import { usersLogin } from '../actions';
 
-var constraints = {
+const constraints = {
   email: {
     email: {
-      message: "You have entered an invalid email"
-    }
+      message: 'You have entered an invalid email',
+    },
   },
   password: {
     presence: true,
     length: {
       minimum: 6,
-      message: "Password must be at least 6 characters"
+      message: 'Password must be at least 6 characters',
     },
   },
 };
 
 const useLogin = () => {
   const { loginError, isLoggingIn } = useSelector((state) => state.loginReducer);
-  
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({ email: null, password: null });
-  
+
   const dispatch = useDispatch();
 
   const _onChangeEmail = (v) => setEmail(v);

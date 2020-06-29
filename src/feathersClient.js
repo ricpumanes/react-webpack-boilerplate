@@ -1,15 +1,15 @@
-const feathers = require("@feathersjs/feathers");
-const socketio = require("@feathersjs/socketio-client");
-const io = require("socket.io-client");
-const auth = require("@feathersjs/authentication-client");
+const feathers = require('@feathersjs/feathers');
+const socketio = require('@feathersjs/socketio-client');
+const io = require('socket.io-client');
+const auth = require('@feathersjs/authentication-client');
 
-const host = "<host>";
+const host = '<host>';
 
-let client = feathers();
+const client = feathers();
 
 const init = () => {
   const socket = io(host, {
-    transports: ["websocket"],
+    transports: ['websocket'],
     forceNew: true,
   });
 

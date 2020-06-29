@@ -3,7 +3,7 @@ import { LOGIN } from './types';
 
 export const usersLogin = (queryParams = {}, callbacks = {}) => {
   const { email, password } = queryParams;
-  
+
   return {
     type: LOGIN.type,
     types: [LOGIN.request, LOGIN.fulfilled, LOGIN.rejected],
@@ -12,7 +12,7 @@ export const usersLogin = (queryParams = {}, callbacks = {}) => {
     callService: () => {
       // test
       return new Promise((resolve, reject) => {
-        let t = setTimeout(() => {
+        const t = setTimeout(() => {
           clearTimeout(t);
           reject({ message: 'wakeke!' });
         }, 1000 * 3);

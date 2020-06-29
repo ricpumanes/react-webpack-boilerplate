@@ -3,7 +3,7 @@
  * @returns () => ({})
  */
 export const makeAction = (type) => {
-  return function(...args) {
+  return function (...args) {
     const action = { type };
     action.payload = args[0];
     return action;
@@ -36,8 +36,7 @@ export const makeReducer = (initialState, handlers) => {
   return function reducer(state = initialState, action) {
     if (handlers.hasOwnProperty(action.type)) {
       return handlers[action.type](state, action);
-    } else {
-      return { ...state };
     }
+    return { ...state };
   };
 };
